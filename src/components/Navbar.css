@@ -1,0 +1,143 @@
+/* Navbar Wrapper */
+.navbar {
+  background: #0f172a;
+  color: #CBD5E1;
+   padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+
+
+.namee {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #CBD5E1;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  font-size: 18px;
+}
+
+.nav-links a {
+  color: #CBD5E1;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #facc15; 
+}
+
+/* Cart Button */
+.cart-btn {
+  background: transparent;
+  color: #CBD5E1;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.cart-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.badge {
+  background: #CBD5E1;
+  color: #0f172a;
+  padding: 2px 6px;
+  border-radius: 999px;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #CBD5E1;
+}
+
+/* ===== Responsive: Tablet (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 60%;
+    background: #0f172a;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 4rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    font-size: 1.1rem;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .cart-btn {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+}
+
+/* ===== Responsive: Mobile (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .nav-links {
+    width: 100%;
+    font-size: 1rem;
+    padding-top: 5rem;
+  }
+
+  .brand .namee {
+    font-size: 1.1rem;
+  }
+
+  .cart-btn {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+}
+
+
+
+
+

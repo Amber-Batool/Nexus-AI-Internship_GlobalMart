@@ -1,0 +1,150 @@
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #0f172a;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.close-btn {
+
+
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+   color: #CBD5E1
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.cart-item-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.cart-item-info {
+  flex: 1;
+  font-size: 14px;
+}
+
+.remove-btn {
+  margin-left: 10px;
+  color: #CBD5E1;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  height: 30px;
+  width: 70px;
+  border: 1px solid #CBD5E1;
+  border-radius: 5px;
+}
+
+/* ===== Tablet (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .cart-panel {
+    width: 60%;           
+    right: -100%;          
+  }
+
+  .cart-panel.open {
+    right: 0;
+  }
+
+  .close-btn {
+    font-size: 22px;
+  }
+
+  .cart-item {
+    flex-direction: row;
+    font-size: 13px;
+    padding-bottom: 8px;
+  }
+
+  .cart-item-img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .remove-btn {
+    width: 60px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .cart-panel {
+    width: 100%;          
+    right: -100%;
+    padding: 15px;
+    box-sizing: border-box; 
+  }
+
+  .close-btn {
+    font-size: 22px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .cart-item {
+    display: flex;
+    flex-direction: row;   
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .cart-item-img {
+    width: 60px;      
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;      
+  }
+
+  .cart-item-info {
+    flex: 1;              
+    font-size: 13px;
+    word-wrap: break-word;
+    
+  }
+
+  .remove-btn {
+    width: 65px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
