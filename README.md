@@ -2,6 +2,8 @@
 
 A responsive e-commerce web application built with **React** **JS** and **CSS**.  
 GlobalMart allows users to browse products, add them to a cart, and view a summary of selected items with dynamic updates.
+
+
 ✨ Features
 ⚙️ Core Functionality
 
